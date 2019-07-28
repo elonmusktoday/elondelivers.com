@@ -1,0 +1,256 @@
+<html>
+
+<head>
+    
+    <meta content="text/html;charset=utf-8" http-equiv="Content-Type">
+    <meta content="utf-8" http-equiv="encoding">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
+    
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:description" content="Elon Always Delivers?" />
+    <meta name="twitter:title" content="Elon Musk Bullshit Generator" />
+    <meta name="twitter:image" content="https://elondelivers.com/elon_musk_bullshit_generator.png" />
+    <meta name="twitter:image:width" content="600" />
+    <meta name="twitter:image:height" content="335" />
+
+
+    <title>Elon Always Delivers</title>
+
+    <link rel="stylesheet"
+        href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css"
+        integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO"
+        crossorigin="anonymous"
+    >
+
+    <style>
+        
+        h1 {
+            color: green;
+        }
+
+        blockquote {
+            background: #f9f9f9;
+            border-left: 10px solid #ccc;
+            margin: 1em 10px;
+            padding: 0.5em 10px;
+            quotes: "\201C""\201D""\2018""\2019";
+        }
+
+        body {
+            padding: 20px;
+            background-color: #f5f5f5;
+        }
+
+    </style>
+    
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+
+
+</head>
+<body>
+
+
+<h1>Elon Always Delivers</h1>
+<hr />
+
+
+<input type="button" 
+    value="New Elon Musk Bullshit Promise"
+    name="generator" 
+    onclick="displayBullshit()"
+> 
+
+
+<div id="bs"></div>
+
+
+<script>
+
+// First half of sentence, first letter should be capitalized.
+let claims = [
+  "Use your phone in car when you hear a rattle/squeak & pinpoint origin by acoustic signature & triangulation",
+  "Build a network of superchargers in Kazakhstan",
+  "Produce a Tesla submarine car",
+  "Create a flying Roadster with cold gas thrusters",
+  "Cold gas thrusters behind the license plate",
+  "Build tunnels with cars on skates going hundreds of miles an hour",
+  "There is unlimited demand for Teslas",
+  "Never need another funding round",
+  "Make Tesla cash flow profitable from core operations",
+  "Full self driving",
+  "Create a fleet of robo-taxis",
+  "Sell cars that will appreciate in value",
+  "Rocket service from NY to London in 29 minutes, cost per seat should be about the same as full fare economy in an aircraft",
+  "Build a hyperloop going from NY to DC in 29 minutes",
+  "Build a factory that looks like an alien dreadnaught with machines that build the machines",
+  "Build an electric roller coaster with pods in the factory",
+  "Set up free frozen yogurt stands in the Tesla factory",
+  "Offer a $35,000 Tesla you can buy through our website",
+  "Set up battery swap stations that will be faster than filling a car up with gas",
+  "Create a robo-snake charger that finds the charging port",
+  "Build vertical take off and landing electric jets",
+  "Make Tesla sustainably profitable",
+  "Ramp up to a 1000% increase",
+  "Offer Tesla car insurance",
+  "Create AI that lets monkeys control computers",
+  "Deliver a feature that lets you summon your car from anywhere connected by land",
+  "Have 500,000 a year production",
+  "Secure funding to take Tesla private",
+  "It'll be a better truck than an equivalent F-150 and a better sports car than a standard 911",
+  "Tesla semis with a better drag coefficient than a supercar",
+  "Teraform Mars",
+  "Cure epilepsy with tiny wires",
+  "Gonna put an old school drive-in, roller skates & rock restaurant at one of the new Tesla Supercharger locations in LA",
+  "What people should absolutely have zero concern about, and I mean zero, is that Tesla will achieve a 10,000 unit production week",
+  "The fundamental message consumers should be taking today is that it's financially insane to buy anything other than a Tesla. It'll be like owning a horse",
+  "Just received verbal govt approval for The Boring Company to build an underground NY-Phil-Balt-DC hyperloop",
+  "All cars exiting the factory have hardware necessary for level 5 autonomy",
+  "All Superchargers will be solar powered",
+  "We are aiming to bring something to market that helps with certain severe brain injuries such as stroke, cancer lesion, congenital",
+  "Solar roof tiles that have two or three times the longevity of asphalt",
+  "All you will need to do is get in and tell your car where to go",
+  "Fixed summon buttons at existing bus stops would serve those who don’t have a phone",
+  "If a Tesla detects something wrong - like a flat tire or a drive unit failure - that before the car has even come to a halt, there's a tow truck and service loaner on the way",
+  "SpaceX cold gas thruster system with ultra high pressure air in a composite over-wrapped pressure vessel in place of the 2 rear seats",
+  "Recharge a Tesla Model S throughout the country faster than you could fill a gas tank",
+  "Tesla does not need to ever raise another funding round",
+  "The Boring Company will be using dirt from tunnel digging to create bricks for low cost housing",
+  "Please consider this a commitment that I will fund fixing the water in any house in Flint that has water contamination above FDA levels",
+  "We will make a video of the mini-sub/pod going all the way to cave 5 no problemo",
+  "Shareholders could either to sell at 420 or hold shares & go private",
+  "Boring company will transport your car all the way into your garage",
+  "Goal is for repaired car to be better than before accident",
+  "Build our own car carriers this weekend to alleviate load",
+  "Teslaquila",
+  "A Tesla should be able to drive around a parking lot, find an empty spot, read signs to confirm it’s valid & park",
+  "You’ll be able to drive it from your phone remotely like a big RC car if in line of sight",
+  "Tesla Supercharger capacity will double, we expect to be within range of 95% to 100% of population in all active markets",
+  "Ability to stream YouTube & Netflix when car is stopped",
+  "Starhopper flight",
+  "10km vacuum tunnel with a curve",
+  "Tesla Service Centers & Superchargers are being opened across Eastern Europe",
+  "Cost of the Tesla FSD option will increase",
+  "Accelerating Starship development to build the Martian Technocracy",
+  "New Tesla Summon will 🧨 ur 🧠",
+  "Model S & X primary HEPA filter literally 1000% bigger than normal car air filter",
+  "Another great thing about many layers of interconnected tunnels with ramps & elevators is that they can go from near your home all way to popping up at destination parking lot",
+  "Fundamental advantage of layers of tunnels is you can have as many lanes as you want going in any direction",
+];
+
+// Finish a sentence. Period gets added later so no final punctuation. Don't capitalize first letter. Do end with a period.
+let qualifiers = [
+  "within a year or two. I'd say 2021 for sure.",
+  "no matter how one considers the data.",
+  "in 3 months maybe, 6 months definitely.",
+  "by the end of month.",
+  "and we are going full 3D with it.",
+  "pending regulator approval.",
+  "by next year.",
+  "by end of this year.",
+  "in about a month.",
+  "ramping up now.",
+  "coming soon.",
+  "soon with accelerated lab testing.",
+  "only inhibitor is affordability.",
+  "once we are past production hell.",
+  "once we are past delivery hell.",
+  "once we are past logistics hell.",
+  "after we solve the corner cases.",
+  "but it turns out this is a remarkably hard problem.",
+  "for all quarters moving forward.",
+  "or something like that.",
+  "despite big auto FUD.",
+  "and big LIDAR can’t stop us.",
+  "in spite of shortseller FUD.",
+  "even though we don't advertise.",
+  "in about four years.",
+  "in two to three months.",
+  "soon!",
+];
+
+// Stand alone at end. Starts with a capital letter & ends with a period.
+let filler = [
+  "Financially insane to do anything else.",
+  "To save the earth.",
+  "To make humanity a multi-planetary species,",
+  "Orders of magnitude better than anything out there today.",
+  "It's a no brainer.",
+  "An exponential improvement to anything else out there.",
+  "For only $1.",
+  "To anti-game the system.",
+  "It shows our fundamental goodness.",
+  "Humans are underrated.",
+  "Air friction.",
+  "Barnacles are holding us back.",
+  "Saboteur employee tried to stop us.",
+  // "Pedo said it couldn't be done",
+  "I am sick of hearing bonehead concerns.",
+  "Force majeure.",
+  "Ballpark figure.",
+  "Let’s go to YouTube.",
+  "[awkward pause], [awkward pause] ... yeah.",
+  "Um.. um....... umum... yeah.",
+  "To clarify.",
+  "It will be much more compelling than anything else out there.",
+  "I'm just making up numbers here.",
+  "I sleep at the factory.",
+  "No kidding.",
+  "Fossil fuel merchants of doubt have been pushing bs for years.",
+  "Ultimately helping the average citizen to be able to travel to other planets.",
+  "Those who buy it earlier will see the benefit.",
+  "I stole the idea from Spaceballs.",
+  "You have been warned.",
+];
+
+// Store most recent bullshit so we can ensure new bullshit isn't a duplicate.
+var lastClaim;
+var lastQualifier;
+var lastFiller;
+
+// Pull some random bullshit out of our array.
+let randomBullshit = function(bullshit) {
+    return bullshit[Math.floor(Math.random() * bullshit.length)];
+}
+
+// Recursive function to ensure we aren't using same bullshit twice in a row.
+let randomBullshitNotDuplicate = function(listOfBullshit, oldBullshit) {
+    let newBullshit = randomBullshit(listOfBullshit);
+    return newBullshit == oldBullshit ? 
+        randomBullshitNotDuplicate(listOfBullshit, oldBullshit) :
+        newBullshit;
+}
+
+// 50% chance we throw on some bonus bullshit filler as a 2nd sentence.
+let newFiller = function() {
+    return lastFiller = Math.random() >= 0.5 ? lastFiller = randomBullshitNotDuplicate(filler, lastFiller): "";
+}
+
+// Claim is first half of our sentence.
+let newClaim = function() {
+    return lastClaim = randomBullshitNotDuplicate(claims, lastClaim);
+}
+
+// Qualifier finishes sentence.
+let newQualifier = function() {
+    return lastQualifier = randomBullshitNotDuplicate(qualifiers, lastQualifier);
+}
+
+// Builds the text of our bullshit claim.
+let newBullshit = function() {
+    return newClaim() + " " + newQualifier() + " " + newFiller();
+}
+
+// Click handler to create Elon bullshit. Writes blockquote HTML & sticks it in the #bs div.
+let displayBullshit = function() {
+    document.getElementById("bs").innerHTML = 
+        "<blockquote>" + newBullshit() + "</blockquote>";
+}
+
+</script>
+
+</body>
+</html>
+
